@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Environment variables - NEVER upload API keys
+.env
+.env.local
+.env.production
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+
+# Build files
+dist/
+build/
+
+# Vercel
+.vercel/
+
+# System files
+.DS_Store
+Thumbs.db
