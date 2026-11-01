@@ -47,21 +47,7 @@ const PROVIDERS = {
   }
 };
 
-app.get("/", (req, res) => {
-  res.json({
-    app: "NVP AI",
-    status: "Backend running"
-  });
-});
-
-app.get("/api/models", (req, res) => {
-  res.json({
-    providers: Object.keys(PROVIDERS).map(name => ({
-      id: name,
-      available: Boolean(PROVIDERS[name].key)
-    }))
-  });
-});
+const path = require("path");
 
 async function askProvider(provider, messages) {
   const config = PROVIDERS[provider];
